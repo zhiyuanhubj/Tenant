@@ -10,13 +10,12 @@ First, make sure you have Python and the required dependencies installed.
 
 ```bash
 pip install -r requirements.txt
-```bash
 
 ### Run Flask App
 
 ```bash
 nohup python flask_api.py
-```bash
+
 
 ## API Endpoint
 
