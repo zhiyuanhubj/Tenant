@@ -228,7 +228,8 @@ class Tenant_ask():
         temperature = 0,
         max_tokens=2000
         )
-      print(e)
+      except Exception as e:
+        print(e)
 
       flag = 1
       count += 1
