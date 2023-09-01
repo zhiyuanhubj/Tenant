@@ -10,11 +10,13 @@ First, make sure you have Python and the required dependencies installed.
 
 ```bash
 pip install -r requirements.txt
+```bash
 
 ### Run Flask App
 
 ```bash
 nohup python flask_api.py
+```bash
 
 ## API Endpoint
 
@@ -31,6 +33,7 @@ curl -X POST \
   -d '{
     "dialogue_history": "Tenant Q: Can I book a viewing for the property at 56 Mortimer road tomorrow at 3pm?\nAgent: OK, let me check some information first. Do you intend to rent a property with your kids?\nTenant Q: yes\nAgent: Do you keep any pets\nTenant: Yes, we have a dog."
   }'
+```bash
 
 ## Response Example
 
@@ -52,4 +55,5 @@ The API will return a JSON response containing generated tenant information data
   "db_result": "The property at 56 Mortimer Road is ready for rent. Up to 2 tenants are allowed. Minimum tenancy period is 12 months. Your pet is allowed.",
   "generated_reply": "Based on our records, the property at 56 Mortimer Road is ready for rent. Your pet is allowed. Please feel free to contact us for more details. Thank you!"
 }
+```bash
 
