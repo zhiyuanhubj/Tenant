@@ -11,7 +11,7 @@ from tqdm import tqdm
 import openai
 
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 his = """
@@ -86,12 +86,15 @@ class Tenant_ask():
     while True:
       if flag ==1 or count >5:
         break
-      response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=prompt,
-        temperature = 0,
-        max_tokens=2000
-      )
+      try:
+        response = openai.ChatCompletion.create(
+          model="gpt-4",
+          messages=prompt,
+          temperature = 0,
+          max_tokens=2000
+        )
+      except Exception as e:
+        print(e)
       flag = 1
       count += 1
 
@@ -124,13 +127,15 @@ class Tenant_ask():
     while True:
       if flag ==1 or count >5:
         break
-
-      response = openai.ChatCompletion.create(
-      model="gpt-4",
-      messages=sql_prompt,
-      temperature = 0,
-      max_tokens=2000
-      )
+      try:
+        response = openai.ChatCompletion.create(
+        model="gpt-4",
+        messages=sql_prompt,
+        temperature = 0,
+        max_tokens=2000
+        )
+      except Exception as e:
+        print(e)
 
       flag = 1
       count += 1
@@ -216,13 +221,14 @@ class Tenant_ask():
     while True:
       if flag ==1 or count >5:
         break
-
-      response = openai.ChatCompletion.create(
-      model="gpt-3.5-turbo",
-      messages=db_mimic,
-      temperature = 0,
-      max_tokens=2000
-      )
+      try:
+        response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=db_mimic,
+        temperature = 0,
+        max_tokens=2000
+        )
+      print(e)
 
       flag = 1
       count += 1
@@ -253,13 +259,15 @@ class Tenant_ask():
     while True:
       if flag ==1 or count >5:
         break
-
-      response = openai.ChatCompletion.create(
-      model="gpt-4",
-      messages=relpy_generation,
-      temperature = 0,
-      max_tokens=2000
-      )
+      try:
+        response = openai.ChatCompletion.create(
+        model="gpt-4",
+        messages=relpy_generation,
+        temperature = 0,
+        max_tokens=2000
+        )
+      except Exception as e:
+        print(e)
 
       flag = 1
       count += 1
